@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: wz8552663
+    url: jdbc:mysql://localhost:3306/newsmgr?characterEncoding=UTF-8&serverTimezone=UTC
+  application:
+    name: info-provider
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+dubbo:
+  scan:
+    base-packages: com.wz.newsprovider.serviceImpl
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    port: -1
+    name: dubbo
+
+myname: 提供者1
